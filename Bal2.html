@@ -1,82 +1,259 @@
-/*customised range*/ input[type="range"].range
-{
-     cursor: pointer;
-     width: 100px !important;
-     -webkit-appearance: none;
-     z-index: 200;
-     width:50px;
-     border: 1px solid #e6e6e6;
-     background-color: #e6e6e6;
-     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e6e6e6), to(#d2d2d2));
-     background-image: -webkit-linear-gradient(right, #e6e6e6, #d2d2d2);
-     background-image: -moz-linear-gradient(right, #e6e6e6, #d2d2d2);
-     background-image: -ms-linear-gradient(right, #e6e6e6, #d2d2d2);
-     background-image: -o-linear-gradient(right, #e6e6e6, #d2d2d2);
-}
 
-/*customised range when focusing on input */ input[type="range"].range:focus
-{
-     border: 0 !imporant;
-outline: none !important;
-}
 
-/*customised range slider icon*/ input[type="range"].range::-webkit-slider-thumb
-{
-     -webkit-appearance: none;
-     width: 10px;
-     height: 10px;
-background-color: #555;
-     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4DDBFF), to(#00CCFF));
-     background-image: -webkit-linear-gradient(right, #4DDBFF, #00CCFF);
-     background-image: -moz-linear-gradient(right, #4DDBFF, #00CCFF);
-     background-image: -ms-linear-gradient(right, #4DDBFF, #00CCFF);
-     background-image: -o-linear-gradient(right, #4DDBFF, #00CCFF);
-}
+<html>
+<head>
+    <title>Custom Vertical Input Type Range using CSS3</title>
+    <style>
+    html { background-color: #eaeaea; color: #555; }
+    body { font-family: Arial, Calibri; width: 900px; margin: 50px auto; background-color: White; padding: 50px;}
+    h1 { font-size: 20px; padding-bottom: 10px; }
+    a { color: #555; text-decoration: none; font-weight: bold;}
+	p { font-size: smaller; display: block;}
+	.container { border: 3px solid #eee; margin: 10px; padding:10px; float:left; text-align: center; max-width: 20%;}
+    
+		input[type="range"].range {
+			cursor: pointer;
+			width: 100px !important;
+			-webkit-appearance: none;
+			z-index: 200;
+			width:50px;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e6e6e6), to(#d2d2d2));
+			background-image: -webkit-linear-gradient(right, #e6e6e6, #d2d2d2);
+			background-image: -moz-linear-gradient(right, #e6e6e6, #d2d2d2);
+			background-image: -ms-linear-gradient(right, #e6e6e6, #d2d2d2);
+			background-image: -o-linear-gradient(right, #e6e6e6, #d2d2d2);
+		}
+		
+		input[type="range"].range:focus{
+			border: 0 !imporant; outline: none !important;
+		}
+		
+		input[type="range"].range::-webkit-slider-thumb  {
+			-webkit-appearance: none;
+			width: 10px;
+			height: 10px; background-color: #555;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4DDBFF), to(#00CCFF));
+			background-image: -webkit-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -moz-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -ms-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -o-linear-gradient(right, #4DDBFF, #00CCFF);
+		}
+		
+		input[type="range"].round {
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+		}
+		
+		input[type="range"].round::-webkit-slider-thumb  {
+			-webkit-border-radius: 5px;	-moz-border-radius: 5px; -o-border-radius: 5px;
+		}
+		
+		.horizontal-lowest-first
+		{
+			-webkit-transform:rotate(0deg);       
+			-moz-transform:rotate(0deg);
+			-o-transform:rotate(0deg);
+			-ms-transform:rotate(0deg);
+			transform:rotate(0deg);
+		}
+		
+		.horizontal-highest-first
+		{
+			-webkit-transform:rotate(180deg);       
+			-moz-transform:rotate(180deg);
+			-o-transform:rotate(180deg);
+			-ms-transform:rotate(180deg);
+			transform:rotate(180deg);
+		}
+		
+		.vertical-lowest-first
+		{
+			-webkit-transform:rotate(90deg);       
+			-moz-transform:rotate(90deg);
+			-o-transform:rotate(90deg);
+			-ms-transform:rotate(90deg);
+			transform:rotate(90deg);
+		}
+		
+		.vertical-heighest-first
+		{
+			-webkit-transform:rotate(270deg);       
+			-moz-transform:rotate(270deg);
+			-o-transform:rotate(270deg);
+			-ms-transform:rotate(270deg);
+			transform:rotate(270deg);
+		}
+		
 
-/*setting round corners to the range */ input[type="range"].round {
-     -webkit-border-radius: 20px;
-     -moz-border-radius: 20px;
-     border-radius: 20px;
-}
-
-/*setting round corners to the range slider icon*/ input[type="range"].round::-webkit-slider-thumb {
-     -webkit-border-radius: 5px;
--moz-border-radius: 5px;
--o-border-radius: 5px;
-}
-
-/* set range from 0 - 1 horizontal as by default */ .horizontal-lowest-first
-{
-     -webkit-transform:rotate(0deg);
-     -moz-transform:rotate(0deg);
-     -o-transform:rotate(0deg);
-     -ms-transform:rotate(0deg);
-     transform:rotate(0deg);
-}
-
-/* set range from 1 - 0 horizontal (highest first) */ .horizontal-highest-first
-{
-     -webkit-transform:rotate(180deg);
-     -moz-transform:rotate(180deg);
-     -o-transform:rotate(180deg);
-     -ms-transform:rotate(180deg);
-     transform:rotate(180deg);
-}
-
-/* set range from 0 - 1 vertically (lowest on top) */ .vertical-lowest-first
-{
-     -webkit-transform:rotate(90deg);
-     -moz-transform:rotate(90deg);
-     -o-transform:rotate(90deg);
-     -ms-transform:rotate(90deg);
-     transform:rotate(90deg);
-}
-
-/* set range from 1 - 0 vertically (highest on top) */ .vertical-heighest-first
-{
-     -webkit-transform:rotate(270deg);
-     -moz-transform:rotate(270deg);
-     -o-transform:rotate(270deg);
-     -ms-transform:rotate(270deg);
-     transform:rotate(270deg);
-}
+    </style>
+</head>
+<body>
+            <h1> RochCass: Custom Vertical Input Type Range using CSS3</h1>
+            
+			<h2> Horizontal Ranges </h2>
+			
+			<div class="container" style="margin-left: 0px">
+				<p> Horizontal, lowest first Square Edges: </p>			
+				<input class='range horizontal-lowest-first' type='range' min='0' max='1' step='0.1' value='1' >
+				<p> class="range horizontal-lowest-first" </p>	
+			</div>
+			<div class="container">
+				<p> Horizontal, highest first Square Edges: </p>			
+				<input class='range horizontal-highest-first' type='range' min='0' max='1' step='0.1' value='1' >
+				<p> class="range horizontal-highest-first" </p>	
+			</div>
+			<div class="container">
+				<p> Horizontal, lowest first Round Edges: </p>			
+				<input class='range horizontal-lowest-first round' type='range' min='0' max='1' step='0.1' value='1' >
+				<p> class="range horizontal-lowest-first round" </p>	
+			</div>
+			<div class="container" style="margin-right: 0px">
+				<p> Horizontal, highest first Round Edges: </p>			
+				<input class='range horizontal-highest-first round' type='range' min='0' max='1' step='0.1' value='1' >
+				<p> class="range horizontal-highest-first round" </p>	
+			</div>
+			
+			<h2> Vertical Ranges </h2>
+			
+			<div class="container" style="margin-left: 0px">
+				<p> Vertical, lowest first Square Edges: </p>				
+				<br/><br/>
+				<input class='range vertical-lowest-first' type='range' min='0' max='1' step='0.1' value='1' >	
+				<br/><br/><br/>
+				<p> class="range vertical-lowest-first" </p>	
+			</div>
+			<div class="container">
+				<p> Vertical, highest first Square Edges: </p>				
+				<br/><br/>
+				<input class='range vertical-heighest-first' type='range' min='0' max='1' step='0.1' value='1' >	
+				<br/><br/><br/>
+				<p> class="range vertical-heighest-first" </p>	
+			</div>
+			<div class="container">
+				<p> Vertical, lowest first Round Edges: </p>				
+				<br/><br/>
+				<input class='range vertical-lowest-first round' type='range' min='0' max='1' step='0.1' value='1' >	
+				<br/><br/><br/>
+				<p> class="range vertical-lowest-first round" </p>	
+			</div>
+			<div class="container" style="margin-right: 0px">
+				<p> Vertical, highest first Round Edges: </p>		
+				<br/><br/>
+				<input class='range vertical-heighest-first round' type='range' min='0' max='1' step='0.1' value='1' >	
+				<br/><br/><br/>
+				<p> class="range vertical-heighest-first round" </p>	
+			</div>
+			
+			<div>
+				<h2> CSS Classes: </h2>
+				<code>
+					/*customised range*/
+					input[type="range"].range <br />
+					{ <br />
+					&nbsp;&nbsp; &nbsp;  cursor: pointer;<br />
+					&nbsp;&nbsp; &nbsp;  width: 100px !important;<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-appearance: none; <br />
+					&nbsp;&nbsp; &nbsp;  z-index: 200; <br />
+					&nbsp;&nbsp; &nbsp;  width:50px; <br />
+					&nbsp;&nbsp; &nbsp;  border: 1px solid #e6e6e6; <br />
+					&nbsp;&nbsp; &nbsp;  background-color: #e6e6e6; <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e6e6e6), to(#d2d2d2)); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -webkit-linear-gradient(right, #e6e6e6, #d2d2d2); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -moz-linear-gradient(right, #e6e6e6, #d2d2d2); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -ms-linear-gradient(right, #e6e6e6, #d2d2d2); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -o-linear-gradient(right, #e6e6e6, #d2d2d2); <br />
+				}<br />
+				
+				<br />
+				/*customised range when focusing on input */
+				input[type="range"].range:focus<br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  border: 0 !imporant; <br /> outline: none !important; <br />
+				}<br />
+				
+				<br />
+				/*customised range slider icon*/
+				input[type="range"].range::-webkit-slider-thumb  <br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-appearance: none; <br />
+					&nbsp;&nbsp; &nbsp;  width: 10px; <br />
+					&nbsp;&nbsp; &nbsp;  height: 10px; <br /> background-color: #555; <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4DDBFF), to(#00CCFF)); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -webkit-linear-gradient(right, #4DDBFF, #00CCFF); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -moz-linear-gradient(right, #4DDBFF, #00CCFF); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -ms-linear-gradient(right, #4DDBFF, #00CCFF); <br />
+					&nbsp;&nbsp; &nbsp;  background-image: -o-linear-gradient(right, #4DDBFF, #00CCFF); <br />
+				}<br />
+				
+				<br />
+				/*setting round corners to the range */
+				input[type="range"].round {<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-border-radius: 20px; <br />
+					&nbsp;&nbsp; &nbsp;  -moz-border-radius: 20px; <br />
+					&nbsp;&nbsp; &nbsp;  border-radius: 20px; <br />
+				}<br />
+				
+				<br />
+				/*setting round corners to the range slider icon*/
+				input[type="range"].round::-webkit-slider-thumb  {<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-border-radius: 5px; <br />	-moz-border-radius: 5px; <br /> -o-border-radius: 5px; <br />
+				}<br />
+				
+				<br />
+				/* set range from 0 - 1 horizontal as by default */
+				.horizontal-lowest-first<br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-transform:rotate(0deg); <br />       
+					&nbsp;&nbsp; &nbsp;  -moz-transform:rotate(0deg); <br />
+					&nbsp;&nbsp; &nbsp;  -o-transform:rotate(0deg); <br />
+					&nbsp;&nbsp; &nbsp;  -ms-transform:rotate(0deg); <br />
+					&nbsp;&nbsp; &nbsp;  transform:rotate(0deg); <br />
+				}<br />
+				
+				<br />
+				
+				/* set range from 1 - 0 horizontal (highest first) */
+				.horizontal-highest-first<br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-transform:rotate(180deg); <br />       
+					&nbsp;&nbsp; &nbsp;  -moz-transform:rotate(180deg); <br />
+					&nbsp;&nbsp; &nbsp;  -o-transform:rotate(180deg); <br />
+					&nbsp;&nbsp; &nbsp;  -ms-transform:rotate(180deg); <br />
+					&nbsp;&nbsp; &nbsp;  transform:rotate(180deg); <br />
+				}<br />
+				
+				<br />
+				
+				/* set range from 0 - 1 vertically (lowest on top) */
+				.vertical-lowest-first<br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-transform:rotate(90deg); <br />       
+					&nbsp;&nbsp; &nbsp;  -moz-transform:rotate(90deg); <br />
+					&nbsp;&nbsp; &nbsp;  -o-transform:rotate(90deg); <br />
+					&nbsp;&nbsp; &nbsp;  -ms-transform:rotate(90deg); <br />
+					&nbsp;&nbsp; &nbsp;  transform:rotate(90deg); <br />
+				}<br />
+				
+				<br />
+				
+				/* set range from 1 - 0 vertically (highest on top) */
+				.vertical-heighest-first<br />
+				{<br />
+					&nbsp;&nbsp; &nbsp;  -webkit-transform:rotate(270deg); <br />       
+					&nbsp;&nbsp; &nbsp;  -moz-transform:rotate(270deg); <br />
+					&nbsp;&nbsp; &nbsp;  -o-transform:rotate(270deg); <br />
+					&nbsp;&nbsp; &nbsp;  -ms-transform:rotate(270deg); <br />
+					&nbsp;&nbsp; &nbsp;  transform:rotate(270deg); <br />
+				}<br />
+		
+				</code>
+			</div>
+			
+            <p> Goodluck :) </p>
+            
+            <p><a href="http://rochcass.wordpress.com/2013/11/22/custom-vertical-input-type-range/"> Back to Article</a></p>
+</body>
+</html>
