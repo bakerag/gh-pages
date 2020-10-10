@@ -89,6 +89,22 @@
     </style>
 </head>
 <body>
+
+<datalist id="volsettings">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+</datalist>
+
             <h1> RochCass: Custom Vertical Input Type Range using CSS3</h1>
             
 		
@@ -97,7 +113,9 @@
 			<div class="container" style="margin-left: 0px">
 				<p> Vertical, lowest first Square Edges: </p>				
 				<br/><br/>
-				<input class='range vertical-lowest-first' type='range' min='0' max='11' step='1' value='1' >	
+				<label for="fader1"></label>
+				<input name="1" class='range vertical-lowest-first' type='range' min='0' max='11' step='1' value='1' >
+                <output for="fader1" id="volume1">6</output>				
 				<br/><br/><br/>
 				<p> class="range vertical-lowest-first" </p>	
 			</div>
