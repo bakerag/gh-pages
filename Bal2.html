@@ -96,6 +96,17 @@ function outputUpdate5(vol) {
 			background-image: -o-linear-gradient(right, #4DDBFF, #00CCFF);
 		}
 		
+		input[name="5"]::-webkit-slider-thumb  {
+			-webkit-appearance: none;
+			width: 10px;
+			height: 10px; background-color: #555;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4DDBFF), to(#00CCFF));
+			background-image: -webkit-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -moz-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -ms-linear-gradient(right, #4DDBFF, #00CCFF);
+			background-image: -o-linear-gradient(right, #4DDBFF, #00CCFF);
+		}
+		
 		input[type="range"].round {
 			-webkit-border-radius: 20px;
 			-moz-border-radius: 20px;
@@ -200,6 +211,15 @@ function outputUpdate5(vol) {
 				<label for="fader4"></label>
 				<input name="4" class='range vertical-heighest-first' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate4(value)">	
 				<output for="fader4" id="volume4">6</output>	
+				<br/><br/><br/>
+				<p> class="range vertical-heighest-first round" </p>	
+			</div>
+			<div class="container" style="margin-right: 0px">
+				<p> Vertical, highest first Round Edges: </p>		
+				<br/><br/>
+				<label for="fader5"></label>
+				<input name="5" class='range vertical-heighest-first' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate5(value)">	
+				<output for="fader5" id="volume5">6</output>	
 				<br/><br/><br/>
 				<p> class="range vertical-heighest-first round" </p>	
 			</div>
