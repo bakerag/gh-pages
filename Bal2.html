@@ -137,7 +137,7 @@ function outputUpdate5(vol) {
 				<p> Vertical, lowest first Square Edges: </p>				
 				<br/><br/>
 				<label for="fader1"></label>
-				<input name="1" class='range vertical-lowest-first' type='range' min='0' max='11' step='1' value='1' >
+				<input name="1" class='range vertical-lowest-first' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate1(value)" >
                 <output for="fader1" id="volume1">6</output>				
 				<br/><br/><br/>
 				<p> class="range vertical-lowest-first" </p>	
