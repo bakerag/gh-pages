@@ -32,20 +32,7 @@ function outputUpdate5(vol) {
 	p { font-size: smaller; display: block;}
 	.container { border: 3px solid #eee; margin: 10px; padding:10px; float:left; text-align: center; max-width: 15%; height: 400px;}
     
-		input[type="range"].range {
-			cursor: pointer;
-			width: 200px !important;
-			-webkit-appearance: none;
-			z-index: 200px;
-			width:10%;
-			border: 1px solid #e6e6e6;
-			background-color: #e6e6e6;
-			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e6e6e6), to(#d2d2d2));
-			background-image: -webkit-linear-gradient(right, #e6e6e6, #d2d2d2);
-			background-image: -moz-linear-gradient(right, #e6e6e6, #d2d2d2);
-			background-image: -ms-linear-gradient(right, #e6e6e6, #d2d2d2);
-			background-image: -o-linear-gradient(right, #e6e6e6, #d2d2d2);
-		}
+		
 		input[name="1"].range {
 			cursor: pointer;
 			width: 200px !important;
@@ -59,6 +46,21 @@ function outputUpdate5(vol) {
 			background-image: -moz-linear-gradient(right, #ffcccb, #FF0000);
 			background-image: -ms-linear-gradient(right, #ffcccb, #FF0000);
 			background-image: -o-linear-gradient(right, #ffcccb, #FF0000);
+		}
+		
+		input[name="2"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:10%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fed8b1), to(#FF0000));
+			background-image: -webkit-linear-gradient(right, #fed8b1, #FF0000);
+			background-image: -moz-linear-gradient(right, #fed8b1, #FF0000);
+			background-image: -ms-linear-gradient(right, #fed8b1, #FF0000);
+			background-image: -o-linear-gradient(right, #fed8b1, #FF0000);
 		}
 		
 		input[type="range"].range:focus{
