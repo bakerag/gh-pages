@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<script>
+function outputUpdate1(vol) {
+	document.querySelector('#volume1').value = vol;
+}
+
+function outputUpdate2(vol) {
+	document.querySelector('#volume2').value = vol;
+}
+
+function outputUpdate3(vol) {
+	document.querySelector('#volume3').value = vol;
+}
+
+function outputUpdate4(vol) {
+	document.querySelector('#volume4').value = vol;
+}
+
+function outputUpdate5(vol) {
+	document.querySelector('#volume5').value = vol;
+}
+</script>
+
+<style>
+
+h1 { text-align: center; font-size: 20px; padding-bottom: 10px; }
+body { font-family: Arial, Calibri;}
+
+/*
+ input[type="range"]::-moz-range-progress {
+  width: 50%;
+  background-color: #3071a9; 
+} 
+*/
+
+input[name="1"]::-moz-range-progress {
+  width: 50%;
+  background-color: #FF0000; 
+}
+
+input[name="2"]::-moz-range-progress {
+  width: 50%;
+  background-color: #FFA500; 
+}
+
+input[name="3"]::-moz-range-progress {
+  width: 50%;
+  background-color: #ffff00; 
+}
+
+input[name="4"]::-moz-range-progress {
+  width: 50%;
+  background-color: #008000; 
+}
+
+input[name="5"]::-moz-range-progress {
+  width: 50%;
+  background-color: #0000ff; 
+}
+
+input[name="1"]::-moz-range-track {
+  width: 50%;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ffcccb;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[name="2"]::-moz-range-track {
+  width: 50%;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #fed8b1;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[name="3"]::-moz-range-track {
+  width: 50%;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ffffb3;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[name="4"]::-moz-range-track {
+  width: 50%;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #98fb98;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[name="5"]::-moz-range-track {
+  width: 50%;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #add8e6;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+</style>
+
+<body>
+
+<p>
+<h1> Andreas' BalboaEqualizerMeter </h1>
+<p>
+
+<datalist id="volsettings">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+</datalist>
+
+
+
+<table BORDER="0" CELLPADDING="2" CELLSPACING="2" WIDTH="100%">
+<thead>
+    <tr>
+      <th>Travel</th>
+      <th>Lift</th>
+      <th>Knee Release</th>
+      <th>Staccato</th>
+      <th>Rotation</th>
+    </tr>
+</thead>
+<tfoot>
+    <tr>
+      <th>In Place</th>
+      <th>No Lift</th>
+      <th>No Knee Release</th>
+      <th>Legato</th>
+      <th>No Rotation</th>
+    </tr>
+</tfoot>
+<tbody>
+<tr>
+<td style="text-align:center" WIDTH="20%">
+<label for="fader1"></label>
+<input name="1" type="range" min="0" max="11" value="6" id="fader" orient="vertical" step="1" list="volsettings" oninput="outputUpdate1(value)">
+</td>
+<td style="text-align:center" WIDTH="20%">
+
+<label for="fader2"></label>
+<input name="2" type="range" min="0" max="11" value="6" id="fader" orient="vertical"
+	step="1" list="volsettings" oninput="outputUpdate2(value)">
+</td>
+<td style="text-align:center" WIDTH="20%">
+
+<label for="fader3"></label>
+<input name="3" type="range" min="0" max="11" value="6" id="fader" orient="vertical"
+	step="1" list="volsettings" oninput="outputUpdate3(value)">
+
+</td>
+<td style="text-align:center" WIDTH="20%">
+
+<label for="fader4"></label>
+<input name="4" type="range" min="0" max="11" value="6" id="fader" orient="vertical"
+	step="1" list="volsettings" oninput="outputUpdate4(value)">
+
+</td>
+<td style="text-align:center" WIDTH="20%">
+
+<label for="fader5"></label>
+<input name="5" type="range" min="0" max="11" value="6" id="fader" orient="vertical"
+	step="1" list="volsettings" oninput="outputUpdate5(value)">
+</td>
+</tr>
+
+<tr>
+<td style="text-align:center" WIDTH="20%">
+<output for="fader1" id="volume1">6</output>
+</td>
+<td style="text-align:center" WIDTH="20%">
+<output for="fader2" id="volume2">6</output>
+</td>
+<td style="text-align:center" WIDTH="20%">
+<output for="fader3" id="volume3">6</output>
+</td>
+<td style="text-align:center" WIDTH="20%">
+<output for="fader4" id="volume4">6</output>
+</td>
+<td style="text-align:center" WIDTH="20%">
+<output for="fader5" id="volume5">6</output>
+</td>
+</tr>
+</table>
+<p>
+ <a href="https://www.youtube.com/watch?v=JBbYCaGU-FA">Class 2 - Practice Video</a>
+</p>
+<p>
+Shuffle Practice
+</p>
+<p>
+Basic Routine - 2x8 downhold/uphold + 1x8 quicks + 1x8 holds
+</p>
+<p>
+Lead, Follow, In Place & Travel
+</p>
+<p>
+BalboaEqualizerMeter Challenge - 1.12
+</p>
+<p>
+Balboa Calligraphy - 2.10
+</p> 
+<p>
+Pull Back Triple Challenge 3:52 
+</p>
+<p>
+Holds, Quicks and Lilt Challenge - 5.22
+</p>
+
+</body>
+</html>
