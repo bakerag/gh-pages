@@ -1,0 +1,328 @@
+<html>
+<head>
+    <title>Andreas' Aestheticometer</title>
+	
+<script>
+function outputUpdate1(vol) {
+	document.querySelector('#volume1').value = vol;
+}
+
+function outputUpdate2(vol) {
+	document.querySelector('#volume2').value = vol;
+}
+
+function outputUpdate3(vol) {
+	document.querySelector('#volume3').value = vol;
+}
+
+function outputUpdate4(vol) {
+	document.querySelector('#volume4').value = vol;
+}
+
+function outputUpdate5(vol) {
+	document.querySelector('#volume5').value = vol;
+}
+</script>
+
+    <style>
+    html { background-color: #FFFFFF; color: #555; }
+	h1 { text-align: center; font-size: 20px; padding-bottom: 10px; }
+    body { font-family: Arial, Calibri;}
+    /* body { font-family: Arial, Calibri; width: 900px; margin: 50px auto; background-color: White; padding: 50px;} */
+    /* h1 { font-size: 20px; padding-bottom: 10px; } */
+    a { color: #555; text-decoration: none; font-weight: bold;}
+	p { font-size: smaller; display: block;}
+	table, td { white-space: nowrap; text-align: center}
+	.container { border: 3px solid #eee; margin: 10px; padding:10px; float:left; text-align: center; max-width: 15%; height: 400px;}
+    
+		
+		input[name="1"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:5%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffcccb), to(#FF0000));
+			background-image: -webkit-linear-gradient(right, #ffcccb, #FF0000);
+			background-image: -moz-linear-gradient(right, #ffcccb, #FF0000);
+			background-image: -ms-linear-gradient(right, #ffcccb, #FF0000);
+			background-image: -o-linear-gradient(right, #ffcccb, #FF0000);
+		}
+		
+		input[name="2"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:5%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fed8b1), to(#FFA500));
+			background-image: -webkit-linear-gradient(right, #fed8b1, #FFA500);
+			background-image: -moz-linear-gradient(right, #fed8b1, #FFA500);
+			background-image: -ms-linear-gradient(right, #fed8b1, #FFA500);
+			background-image: -o-linear-gradient(right, #fed8b1, #FFA500);
+		}
+		
+		input[name="3"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:5%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffb3), to(#ffff00));
+			background-image: -webkit-linear-gradient(right, #ffffb3, #ffff00);
+			background-image: -moz-linear-gradient(right, #ffffb3, #ffff00);
+			background-image: -ms-linear-gradient(right, #ffffb3, #ffff00);
+			background-image: -o-linear-gradient(right, #ffffb3, #ffff00);
+		}
+		
+		input[name="4"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:5%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#98fb98), to(#008000));
+			background-image: -webkit-linear-gradient(right, #98fb98, #008000);
+			background-image: -moz-linear-gradient(right, #98fb98, #008000);
+			background-image: -ms-linear-gradient(right, #98fb98, #008000);
+			background-image: -o-linear-gradient(right, #98fb98, #008000);
+		}
+		
+		input[name="5"].range {
+			cursor: pointer;
+			width: 200px !important;
+			-webkit-appearance: none;
+			z-index: 200px;
+			width:5%;
+			border: 1px solid #e6e6e6;
+			background-color: #e6e6e6;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#add8e6), to(#0000ff));
+			background-image: -webkit-linear-gradient(right, #add8e6, #0000ff);
+		/*	background-image: -moz-linear-gradient(right, #add8e6, #0000ff); */
+			background-image: -ms-linear-gradient(right, #add8e6, #0000ff);
+			background-image: -o-linear-gradient(right, #add8e6, #0000ff);
+		}
+		
+		input[type="range"].range:focus{
+			border: 0 !imporant; outline: none !important;
+		}
+		
+		input[type="range"].range::-webkit-slider-thumb  { 
+		/* input[name="1"]::-webkit-slider-thumb  {*/
+			-webkit-appearance: none;
+			width: 10px;
+			height: 10px; background-color: #555;
+			background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFFF));
+			background-image: -webkit-linear-gradient(right, #FFFFFF, #FFFFFF);
+			background-image: -moz-linear-gradient(right, #FFFFFF, #FFFFFF);
+			background-image: -ms-linear-gradient(right, #FFFFFF, #FFFFFF);
+			background-image: -o-linear-gradient(right, #FFFFFF, #FFFFFF);
+		}
+		
+input[name="1"]::-moz-range-progress {
+  width: 50%;
+  background-color: #FF0000; 
+}
+
+input[name="2"]::-moz-range-progress {
+  width: 50%;
+  background-color: #FFA500; 
+}
+
+input[name="3"]::-moz-range-progress {
+  width: 50%;
+  background-color: #ffff00; 
+}
+
+input[name="4"]::-moz-range-progress {
+  width: 50%;
+  background-color: #008000; 
+}
+
+input[name="5"]::-moz-range-progress {
+  width: 50%;
+  background-color: #0000ff; 
+}
+				
+		input[type="range"].round {
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+		
+		input[type="range"].round::-webkit-slider-thumb  {
+			-webkit-border-radius: 5px;	-moz-border-radius: 5px; -o-border-radius: 5px;
+		}
+		
+		.horizontal-lowest-first
+		{
+			-webkit-transform:rotate(0deg);       
+			-moz-transform:rotate(0deg);
+			-o-transform:rotate(0deg);
+			-ms-transform:rotate(0deg);
+			transform:rotate(0deg);
+		}
+		
+		.horizontal-highest-first
+		{
+			-webkit-transform:rotate(180deg);       
+			-moz-transform:rotate(180deg);
+			-o-transform:rotate(180deg);
+			-ms-transform:rotate(180deg);
+			transform:rotate(180deg);
+		}
+		
+		.vertical-lowest-first
+		{
+			-webkit-transform:rotate(90deg);       
+			-moz-transform:rotate(90deg);
+			-o-transform:rotate(90deg);
+			-ms-transform:rotate(90deg);
+			transform:rotate(90deg);
+		}
+		
+		.vertical-heighest-first
+		{
+			-webkit-transform:rotate(270deg);       
+			-moz-transform:rotate(270deg);
+			-o-transform:rotate(270deg);
+			-ms-transform:rotate(270deg);
+			transform:rotate(270deg);
+		}
+
+    </style>
+</head>
+<body>
+
+<datalist id="volsettings">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+</datalist>
+
+<p>
+<h1> Andreas' AestheticoMeter </h1>
+<p>
+	
+<table BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<thead>
+</thead>
+<tfoot>
+</tfoot>
+
+<tbody>
+    <tr>
+      <td>Feet - Flexed</td>
+      <td>Knees - Bent</td>
+      <td>Posture - Bent</td>
+      <td>Elbows & Hands - Up</td>
+      <td>Hips - Rotation More</td>
+    </tr>
+<tr>
+<td HEIGHT="250px">
+				<label for="fader1"></label>
+				<input name="1" class='range vertical-heighest-first round' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate1(value)" >
+</td>
+<td HEIGHT="250px">
+				<label for="fader2"></label>
+				<input name="2" class='range vertical-heighest-first round' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate2(value)" >
+</td>
+<td HEIGHT="250px">
+				<label for="fader3"></label>
+				<input name="3" class='range vertical-heighest-first round' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate3(value)" >
+</td>
+<td HEIGHT="250px">
+				<label for="fader4"></label>
+				<input name="4" class='range vertical-heighest-first round' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate4(value)" >
+</td>
+<td HEIGHT="250px">
+				<label for="fader5"></label>
+				<input name="5" class='range vertical-heighest-first round' type='range' min='0' max='11' step='1' value='1' list="volsettings" oninput="outputUpdate5(value)" >
+</td>
+</tr>
+
+<tr>
+<td>
+<output for="fader1" id="volume1">1</output>
+</td>
+<td>
+<output for="fader2" id="volume2">1</output>
+</td>
+<td>
+<output for="fader3" id="volume3">1</output>
+</td>
+<td>
+<output for="fader4" id="volume4">1</output>
+</td>
+<td>
+<output for="fader5" id="volume5">1</output>
+</td>
+</tr>
+
+    <tr>
+      <td>Feet - Pointed</td>
+      <td>Knees - Straight</td>
+      <td>Posture - Straight</td>
+      <td>Elbows & Hands - Down</td>
+      <td>Hips - Rotation Less</td>
+    </tr>
+</table>
+			
+<p>
+ <a href="https://www.youtube.com/watch?v=O5xqsSzghNw">Class 4 - Practice Video</a>
+</p>
+<p>
+The Aestheticometer Drill - 0:32
+</p>
+<p>
+Feet - Flexed or Pointed - 0:40
+</p>
+<p>
+Knees - Bent or Straight - 1:15
+</p>
+<p>
+Posture - Straight or Bent  - 1:39
+</p>
+<p>
+Arms - Elbows & Hands (Up or down) - 1:59
+</p>
+<p>
+Hips - More or Less Rotation - 2:46</p>
+<p>
+Ann Mills footwork in Out & In's - 7:26
+</p>
+<p>
+Mix Ann's footwork with basic Out & In's - 10.04
+</p>
+<p>
+Ann's footwork & Aestheticometer Drill - 10.39
+</p>
+<p>
+One Legged Slide Footwork - 12:42
+</p>
+<p>
+Mix slide with basic Out & In's - 14:59
+</p>
+<p>
+Mix slide with other footwork - 15:25
+</p>
+
+</body>
+</html>
